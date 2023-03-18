@@ -1,3 +1,4 @@
+//Wap to calculate sum of digital of a number
 import java.util.Scanner;
 
 public class SumOfDigits {
@@ -12,6 +13,28 @@ public class SumOfDigits {
             number /= 10;
         }
         System.out.println("The sum of digits is: " + sum);
+    }
+}
+//Wap to print. Prime number from 1 to 100
+public class PrimeNumbers {
+    public static void main(String[] args) {
+        int i, j;
+        boolean isPrime;
+        
+        //loop through numbers 1 to 100
+        for(i=1;i<=100;i++){
+            //check if number is prime or not
+            isPrime = true;
+            for(j=2;j<=i/2;j++){
+                if(i%j == 0){
+                    isPrime = false;
+                    break;
+                }
+            }
+            //print prime numbers
+            if(isPrime)
+                System.out.print(i + " ");
+        }
     }
 }
 
